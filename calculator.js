@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
     var form = document.getElementById("orderForm");
     var input = form.elements.number;
     var pSelect = form.elements.product;
@@ -25,4 +25,5 @@ document.addEventListener('DOMContentLoaded', function () {
         rDiv.textContent = "Стоимость заказа: " + total + " руб ";
     });
 });
+
 

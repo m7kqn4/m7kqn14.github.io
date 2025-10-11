@@ -1,20 +1,20 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var form = document.getElementById('orderForm');
+    var form = document.getElementById("orderForm");
     var input = form.elements.number;
     var pSelect = form.elements.product;
-    var rDiv = document.getElementById('result');
-    var eDiv = document.getElementById('error');
-    var calculateB = document.getElementById('calculateB');
+    var rDiv = document.getElementById("result");
+    var eDiv = document.getElementById("error");
+    var calculateB = document.getElementById("calculateB");
 
-    calculateB.addEventListener('click', function () {
-        rDiv.textContent = '';
-        eDiv.textContent = '';
+    calculateB.addEventListener("click", function () {
+        rDiv.textContent = "";
+        eDiv.textContent = "";
 
         var nValue = input.value.trim();
 
         var regex = /^[1-9]\d*$/;
         if (!regex.test(nValue)) {
-            eDiv.textContent = 'Ошибка: введите положительное число';
+            eDiv.textContent = "Ошибка: введите положительное число";
             return;
         }
 
@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var price = parseInt(pSelect.value, 10);
 
         var total = number * price;
-        rDiv.textContent = 'Стоимость заказа: ' + total + ' руб.';
+        rDiv.textContent = "Стоимость заказа: " + total + " руб ";
     });
 });
+

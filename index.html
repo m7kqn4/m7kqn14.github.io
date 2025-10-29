@@ -3,16 +3,19 @@
 <html lang="ru">
 
 <head>
+    <meta charset="utf-8">
     <title>Калькулятор стоимости заказа</title>
     <script src="calculator.js" defer></script>
 </head>
+
 <body>
     <h1>Калькулятор стоимости заказа</h1>
 
-    <div id="result"></div>
+    <p div id="prodPrice"></div>
+    <p div id="result"></div>
     <div id="error" style="color: red;"></div>
-    
-    <form id="orderForm">
+
+    <form>
         <label>
             Количество товара:
             <input name="number" type="text" placeholder="Количество">
@@ -21,16 +24,25 @@
 
         <label>
             Выберите товар:
-            <select name="product">
-                <option value="39">Вода</option>
-                <option value="50">Хлеб</option>
-                <option value="89">Молоко</option>
+            <select name="prodType">
+              <option value="1">Хлеб</option>
+              <option value="2">Чай</option>
+              <option value="3">Молоко</option>
             </select>
         </label>
         <br><br>
 
-        <button id="calculateB" type="button">Рассчитать стоимость</button>
+        <div id="radios">
+          <label><input type="radio" name="prodOptions" value="option1">коровье</label>
+          <label><input type="radio" name="prodOptions" value="option2">овсяное</label>
+          <label><input type="radio" name="prodOptions" value="option3">миндальное</label>
+        </div>
+
+        <div id="checkboxes">
+          <label><input type="checkbox" name="prop1">с лимоном</label>
+          <label><input type="checkbox" name="prop2">с вишней</label>
+        </div>
+
     </form>
 </body>
 </html>
-
